@@ -1,7 +1,9 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Main from '../Layouts/Main';
 import './login.css';
+
 
 function Componente(props){
 
@@ -13,7 +15,8 @@ function Componente(props){
     } = props;
 
     return(
-        <React.Fragment>
+        <Main>
+
             <div className="margin1">
                 
                 <TextField
@@ -38,7 +41,7 @@ function Componente(props){
                 >Login</Button>
 
             </div>
-        </React.Fragment>
+        </Main>
     );
 }
 
