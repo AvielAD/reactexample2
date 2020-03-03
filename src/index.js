@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Route} from 'react-router-dom'; 
+
 import Dashboard from './Components/dashboard';
 import Settings from './Components/settings';
 import Reports from './Components/reports';

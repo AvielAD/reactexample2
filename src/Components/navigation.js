@@ -1,12 +1,20 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 
-const Nav = () => {
-
+const Nav = (props) => {
+    const { history } = props;
     return (
 
         <React.Fragment>
-
+            <button
+            onClick={()=>history.push('/settings')}
+            >go to settings</button>
+            <button
+            onClick={()=>history.goBack()}
+            >go back</button>
+            <button
+            onClick={()=>history.goForward()}
+            >go Forward</button>
             <ul>
                 <li>
                     <Link to="/dashboard">Dashboard</Link>
@@ -24,4 +32,4 @@ const Nav = () => {
     );
 }
 
-export default Nav;
+export default withRouter(Nav);
