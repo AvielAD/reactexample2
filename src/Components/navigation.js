@@ -2,12 +2,15 @@ import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 
 const Nav = (props) => {
-    const { history } = props;
+    const { history, location, match } = props;
+
+    console.log('location',location);
+    console.log('match',match);
     return (
 
         <React.Fragment>
             <button
-            onClick={()=>history.push('/settings')}
+            onClick={()=>history.push('/settings', {test:123})}
             >go to settings</button>
             <button
             onClick={()=>history.goBack()}
@@ -25,7 +28,9 @@ const Nav = (props) => {
                 <li>
                     <Link to="/reports">Reports</Link>
                 </li>
-            </ul>
+                <li>
+                    <Link to="/reports/123">Reports ID</Link>
+                </li>            </ul>
 
         </React.Fragment>
 
